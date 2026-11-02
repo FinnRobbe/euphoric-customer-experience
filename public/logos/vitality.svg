@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 72" role="img" aria-label="Vitality">
+  <defs>
+    <linearGradient id="vitalityOrange" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FF9A3C"/>
+      <stop offset="100%" stop-color="#E45C00"/>
+    </linearGradient>
+  </defs>
+  <!-- Vitality V mark -->
+  <path d="M22 18 L40 58 L58 18 H48 L40 42 L32 18 Z" fill="url(#vitalityOrange)"/>
+  <text x="72" y="46" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="url(#vitalityOrange)">Vitality</text>
+</svg>

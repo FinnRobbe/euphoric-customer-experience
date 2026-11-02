@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 72" role="img" aria-label="Disney Benefits+">
+  <!-- Mickey mark -->
+  <g transform="translate(2,10) scale(0.72)">
+    <circle cx="18" cy="16" r="14" fill="#1a1a1a"/>
+    <circle cx="46" cy="16" r="14" fill="#1a1a1a"/>
+    <circle cx="32" cy="36" r="22" fill="#1a1a1a"/>
+  </g>
+  <!-- Disney script-style wordmark (geometric approximation of the signature logo) -->
+  <g fill="#1a1a1a" transform="translate(58,8)">
+    <path d="M8 42 C8 18 22 8 38 8 C52 8 60 18 60 30 C60 44 48 52 34 52 C26 52 20 48 16 42 L16 56 L8 56 Z M20 30 C20 40 26 46 34 46 C42 46 48 40 48 30 C48 20 42 14 34 14 C26 14 20 20 20 30 Z"/>
+    <path d="M70 50 C70 28 82 20 96 20 C104 20 110 24 112 30 L104 32 C103 28 100 26 96 26 C88 26 82 32 82 42 L112 42 L112 50 Z"/>
+    <path d="M120 50 L120 22 L128 22 L128 28 C132 22 138 20 144 20 C156 20 162 28 162 40 C162 52 154 58 142 58 C136 58 130 56 126 52 L126 56 L120 56 Z M132 40 C132 48 136 50 142 50 C148 50 152 46 152 40 C152 34 148 28 142 28 C136 28 132 32 132 40 Z"/>
+    <path d="M172 50 L172 8 L180 8 L180 28 C184 22 190 20 196 20 C208 20 214 28 214 40 C214 52 206 58 194 58 C188 58 182 56 178 52 L178 56 L172 56 Z M184 40 C184 48 188 50 194 50 C200 50 204 46 204 40 C204 34 200 28 194 28 C188 28 184 32 184 40 Z"/>
+    <path d="M224 50 L224 22 L232 22 L232 28 C236 22 242 20 248 20 L248 28 C242 28 236 32 236 40 L236 50 Z"/>
+    <!-- flourish / underline swoosh reminiscent of Disney signature -->
+    <path d="M8 58 C40 66 100 66 160 58 C190 54 210 50 220 48" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+{
+  "name": "Finn",
+  "age": 34,
+  "gender": "male",
+  "hasPartner": true,
+  "childrenCount": 1,
+  "priorities": ["mental_health", "family", "cancer", "gp_access"]
+}

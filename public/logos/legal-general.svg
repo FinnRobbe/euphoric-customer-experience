@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 72" role="img" aria-label="Legal &amp; General">
+  <rect width="240" height="72" rx="10" fill="#ffffff"/>
+  <!-- Legal & General multicolour umbrella -->
+  <g transform="translate(14,10)">
+    <path d="M28 6 C10 6 2 18 2 26 L54 26 C54 18 46 6 28 6 Z" fill="#E30613"/>
+    <path d="M28 6 C18 6 10 12 5 20 L18 20 C21 14 24 10 28 8 Z" fill="#5B2C6F"/>
+    <path d="M28 6 C34 6 40 10 45 16 L35 16 C33 12 31 9 28 8 Z" fill="#00A3E0"/>
+    <path d="M18 20 L38 20 L28 26 Z" fill="#FFD100"/>
+    <path d="M38 16 L52 22 L42 22 Z" fill="#78BE20"/>
+    <rect x="26.5" y="26" width="3" height="22" rx="1" fill="#222"/>
+    <path d="M26.5 48 Q20 54 14 50" fill="none" stroke="#222" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <text x="78" y="32" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">Legal &amp;</text>
+  <text x="78" y="52" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#1a1a1a">General</text>
+</svg>

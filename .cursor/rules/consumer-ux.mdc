@@ -1,0 +1,42 @@
+---
+description: Consumer UX standards for Navigator PMI benefits — wording, money/BIK, cover/add-ons
+globs: src/**/*.{tsx,ts}
+alwaysApply: false
+---
+
+# Consumer UX (Navigator)
+
+Full standards: [CONSUMER_STANDARDS.md](../../CONSUMER_STANDARDS.md). When editing UI, follow these hard rules.
+
+## Wording
+
+- Tone: calm, second person, short sentences. No hype or emojis on transactional screens.
+- Tier labels for humans: **Core / Comprehensive / Premier** (not Essential/Plus in UI).
+- Cash: **You pay**. Sticky: **Current price** / **New price**.
+- Page Apply CTA: **Apply / confirm changes**. Leave-guard: **Save / apply changes**. Discard: **Discard draft**.
+- Back links: `‹ Back to {destination}` (capital B).
+- Deltas: `+£X/mo` / `−£X/mo` only.
+
+## Money
+
+- Payable totals = cash employee contribution only. **Never** fold BIK tax into you-pay / Apply totals.
+- Employer budget = core only; dependants and add-ons are employee-paid.
+- Show `/mo` with money. Strikethrough = gross/unsubsidised or previous—not decoration.
+- Upgrade hint only if a higher tier’s projected you-pay is **strictly lower** after included extras drop.
+
+## BIK tax
+
+- Side-note only: `+ ~£X tax` + (i). Exemplary/illustrative rate (30%).
+- Popover explains **why** tax exists briefly. Never call PMI income-tax-free / salary-sacrifice tax-free here.
+
+## Cover & features
+
+- Tier change keeps extras that remain optional on the target plan.
+- Lost-access compares real **access**, not selectedExtra IDs alone. Included-on-higher-tier ≠ “removed”.
+- Lost-access UI: add-on-eligible first; tier-only second (“Only available on …”).
+- Keep-as-add-on: visible Added state while the step is open.
+- Review: Current|After table for changed cover fields only; gain/lose feature lists by access.
+
+## Colour semantics
+
+- Charcoal CTA = primary. Emerald = savings/positive. Amber = caution/upgrade/limited scope. Red = errors only.

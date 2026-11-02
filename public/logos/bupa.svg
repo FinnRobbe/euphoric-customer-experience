@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 72" role="img" aria-label="Bupa">
+  <!-- Transparent field so the mark sits on the card colour. Brand blue stays for light surfaces. -->
+  <path fill="#0079C8" d="M36 54C18 40 10 30 10 20.5 10 12.5 16 7 23.5 7c4.2 0 7.8 2.1 10.3 5.3C36.3 9.1 39.9 7 44.1 7 51.6 7 57.6 12.5 57.6 20.5 57.6 30 49.6 40 36 54Z"/>
+  <text x="72" y="45" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#0079C8">Bupa</text>
+</svg>

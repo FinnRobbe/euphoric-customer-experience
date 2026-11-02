@@ -1,0 +1,34 @@
+---
+description: Freeze core interview pathways — only change them when the user names that surface explicitly
+globs: src/pages/Benefit*.tsx,src/pages/Pmi*.tsx,src/pages/FeatureDetail.tsx,src/components/shell/**/*.tsx,src/components/pmi/**/*.tsx,src/lib/parsePlans.ts,src/lib/fitChecker.ts,src/lib/featureMatch.ts,src/lib/switchDraft.ts,src/lib/coverFieldChanges.ts,src/lib/enrolledPlan.ts,src/lib/askReplies.ts,src/lib/tierLabels.ts,src/state/PlanContext.tsx,src/App.tsx,public/data/pmi-plans.csv
+alwaysApply: false
+---
+
+# Core pathways freeze
+
+The interview walk is locked. Do **not** change these surfaces unless the user explicitly names that pathway, screen, or file in the same message.
+
+## Locked walk
+
+1. Grid → enrolled PMI **Detail** (You pay / Employer pays, Options)
+2. **Personalise** (cover matrix, dependants, extras, Apply wizard, fit)
+3. **Compare** (Your plan sticky, select other → fit + Keep/Lose/Gain → Review & switch)
+4. Other-insurer **Model a switch**
+5. Sidebar **Search or ask** (canned topics only)
+
+## Hard rules
+
+- **Explicit only:** Edit pathway code only when the request names that screen/file/behaviour. “Polish the app” or “fix a bug” without a named surface is not permission.
+- **No drive-bys:** No cleanup, renames, copy rewrites, or “while we’re here” in pathway files.
+- **No scope bleed:** A Detail-only ask must not change Personalise, Compare, AppShell, or cost/fit libs (and the reverse).
+- **No flow redesign:** Do not reorder steps, merge Compare with Model a switch, auto-select Best match again, or remove Apply/fit/Keep-Lose gates unless asked.
+- **Money/fit contracts stay:** You pay vs employer; BIK not in You pay; refused household = `—` / blocked Apply (not a fake saving), unless the user asks to change that contract.
+
+## Allowed without re-opening the walk
+
+- Fixes strictly limited to the file + behaviour the user named
+- Non-pathway files (catalog stubs, Saved, non-PMI placeholders) when those are the ask
+
+## If unsure
+
+Ask which pathway may change. Prefer doing nothing to the walk over a silent redesign.
