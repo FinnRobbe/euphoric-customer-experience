@@ -232,7 +232,7 @@ export function FeatureDetail() {
                 <AccordionSection title="FAQs">
                   {content.faqs.map((faq) => (
                     <AccordionItem key={faq.q} title={faq.q}>
-                      <p>{faq.a}</p>
+                      <p className="font-semibold text-ink">{faq.a}</p>
                     </AccordionItem>
                   ))}
                 </AccordionSection>

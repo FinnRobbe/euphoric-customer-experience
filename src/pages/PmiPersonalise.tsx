@@ -89,13 +89,34 @@ function featureIncluded(
 
 type MatrixCellData = {
   text?: string
+  /** List / pre-subsidy figure shown struck through before `text`. */
+  strikeText?: string
   mark?: 'yes' | 'no'
   note?: string
 }
 
 function MatrixCell({ cell }: { cell: MatrixCellData }) {
   if (cell.text) {
-    return <span className="text-sm leading-snug text-ink">{cell.text}</span>
+    const aria =
+      cell.strikeText != null
+        ? `Core list ${cell.strikeText}, you pay ${cell.text}`
+        : undefined
+    return (
+      <span
+        className="inline-flex flex-wrap items-baseline justify-center gap-x-1.5 text-sm leading-snug text-ink"
+        aria-label={aria}
+      >
+        {cell.strikeText ? (
+          <span
+            className="tabular-nums text-ink/35 line-through decoration-ink/30"
+            aria-hidden="true"
+          >
+            {cell.strikeText}
+          </span>
+        ) : null}
+        <span className="tabular-nums">{cell.text}</span>
+      </span>
+    )
   }
   return (
     <span className="flex flex-col items-center gap-0.5">
@@ -126,12 +147,15 @@ type MatrixRow = {
   current?: MatrixCellData
 }
 
-/** Employee share of core cover only — not dependants or extras (those live in the rail). */
+/** Core list vs employee share — not dependants or extras (those live in the rail). */
 function matrixCellBase(p: Plan): MatrixCellData {
-  const base = getCostBreakdown(p, [], false, 0).base
-  return {
-    text: `£${base}/mo`,
+  const { base, grossBase } = getCostBreakdown(p, [], false, 0)
+  // Strike full core list when employer funding cuts what you pay.
+  // e.g. ~~£42~~ £0 or ~~£72~~ £12.
+  if (grossBase > base) {
+    return { strikeText: `£${grossBase}`, text: `£${base}/mo` }
   }
+  return { text: `£${base}/mo` }
 }
 
 function matrixCellExcess(p: Plan): MatrixCellData {

@@ -17,9 +17,9 @@ export function AccordionItem({
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="flex w-full items-center justify-between gap-3 py-3.5 text-left text-sm font-semibold text-ink"
+        className="flex w-full items-center justify-between gap-3 py-3.5 text-left text-sm font-bold text-ink"
       >
-        <span>{title}</span>
+        <span className="font-bold">{title}</span>
         <span
           className="text-lg font-normal leading-none text-ink-muted"
           aria-hidden="true"

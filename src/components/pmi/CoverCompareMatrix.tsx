@@ -4,6 +4,8 @@ import type { PersonaliseAnswers, Plan } from '../../types'
 
 export type MatrixCellData = {
   text?: string
+  /** List / pre-subsidy figure shown struck through before `text`. */
+  strikeText?: string
   mark?: 'yes' | 'no'
   note?: string
 }
@@ -33,7 +35,12 @@ function featureIncluded(
 }
 
 function matrixCellBase(p: Plan): MatrixCellData {
-  const base = getCostBreakdown(p, [], false, 0).base
+  const { base, grossBase } = getCostBreakdown(p, [], false, 0)
+  // Strike the full core list price when employer funding reduces what you pay.
+  // e.g. ~~£42~~ £0 (employer covers core) or ~~£72~~ £12 (you top up).
+  if (grossBase > base) {
+    return { strikeText: `£${grossBase}`, text: `£${base}/mo` }
+  }
   return { text: `£${base}/mo` }
 }
 
@@ -184,7 +191,26 @@ const ROW_DEFS: {
 
 function MatrixCell({ cell }: { cell: MatrixCellData }) {
   if (cell.text) {
-    return <span className="text-sm leading-snug text-ink">{cell.text}</span>
+    const aria =
+      cell.strikeText != null
+        ? `Core list ${cell.strikeText}, you pay ${cell.text}`
+        : undefined
+    return (
+      <span
+        className="inline-flex flex-wrap items-baseline justify-center gap-x-1.5 text-sm leading-snug text-ink"
+        aria-label={aria}
+      >
+        {cell.strikeText ? (
+          <span
+            className="tabular-nums text-ink/35 line-through decoration-ink/30"
+            aria-hidden="true"
+          >
+            {cell.strikeText}
+          </span>
+        ) : null}
+        <span className="tabular-nums">{cell.text}</span>
+      </span>
+    )
   }
   return (
     <span className="flex flex-col items-center gap-0.5">
